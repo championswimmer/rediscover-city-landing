@@ -13,7 +13,7 @@ const features = [
   },
   {
     icon: Volume2,
-    title: "Documentary Narrator Voice",
+    title: "Narrator Voice",
     description: "Premium users enjoy rich, immersive storytelling read aloud in a captivating David Attenborough-style voice using advanced AI synthesis.",
   },
   {
