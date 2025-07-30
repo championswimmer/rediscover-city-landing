@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Download, Play } from "lucide-react";
 import heroImage from "@/assets/hero-walking.jpg";
+import WaitlistForm from "@/components/WaitlistForm";
 
 const Hero = () => {
   return (
@@ -29,20 +30,21 @@ const Hero = () => {
             culture, and secrets of your city as you explore.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button variant="hero" size="lg" className="text-lg px-8 py-4">
-              <Download className="w-5 h-5" />
-              Download Now
-            </Button>
+          <div className="flex flex-col gap-6 items-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Button variant="outline" size="lg" className="text-lg px-8 py-4 bg-white/10 border-white/30 text-white hover:bg-white/20">
+                <Play className="w-5 h-5" />
+                Watch Demo
+              </Button>
+            </div>
             
-            <Button variant="outline" size="lg" className="text-lg px-8 py-4 bg-white/10 border-white/30 text-white hover:bg-white/20">
-              <Play className="w-5 h-5" />
-              Watch Demo
-            </Button>
+            <div className="max-w-md w-full">
+              <WaitlistForm className="bg-white/95 backdrop-blur-sm" />
+            </div>
           </div>
           
           <p className="text-sm opacity-70 mt-8">
-            Available on iOS and Android
+            Coming soon to iOS and Android
           </p>
         </div>
       </div>

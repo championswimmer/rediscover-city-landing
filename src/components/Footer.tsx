@@ -14,14 +14,14 @@ const Footer = () => {
               of your city with AI-powered narration that brings history to life.
             </p>
             <div className="flex gap-4">
-              <Button variant="outline" size="sm" className="bg-secondary-foreground/10 border-secondary-foreground/20 text-secondary-foreground hover:bg-secondary-foreground/20">
-                <Smartphone className="w-4 h-4 mr-2" />
-                App Store
-              </Button>
-              <Button variant="outline" size="sm" className="bg-secondary-foreground/10 border-secondary-foreground/20 text-secondary-foreground hover:bg-secondary-foreground/20">
-                <Smartphone className="w-4 h-4 mr-2" />
-                Google Play
-              </Button>
+              <div className="bg-secondary-foreground/10 border border-secondary-foreground/20 text-secondary-foreground px-4 py-2 rounded-md text-sm">
+                <Smartphone className="w-4 h-4 mr-2 inline" />
+                App Store - Coming Soon
+              </div>
+              <div className="bg-secondary-foreground/10 border border-secondary-foreground/20 text-secondary-foreground px-4 py-2 rounded-md text-sm">
+                <Smartphone className="w-4 h-4 mr-2 inline" />
+                Google Play - Coming Soon
+              </div>
             </div>
           </div>
           

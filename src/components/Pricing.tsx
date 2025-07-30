@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Check, Crown } from "lucide-react";
+import WaitlistForm from "@/components/WaitlistForm";
 
 const plans = [
   {
@@ -15,7 +16,7 @@ const plans = [
       "3 cities included",
       "Community-generated content",
     ],
-    cta: "Start Exploring",
+    cta: "Join Free Waitlist",
     variant: "outline" as const,
   },
   {
@@ -32,7 +33,7 @@ const plans = [
       "Priority content updates",
       "Custom walking routes",
     ],
-    cta: "Start Free Trial",
+    cta: "Join Premium Waitlist",
     variant: "hero" as const,
     popular: true,
   },
@@ -84,9 +85,7 @@ const Pricing = () => {
                 ))}
               </ul>
               
-              <Button variant={plan.variant} size="lg" className="w-full">
-                {plan.cta}
-              </Button>
+              <WaitlistForm tier={plan.name.toLowerCase().includes('premium') ? 'premium' : 'free'} />
             </Card>
           ))}
         </div>
