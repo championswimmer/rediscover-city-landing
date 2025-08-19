@@ -46,7 +46,7 @@ const WaitlistForm = ({ tier = 'free', className = '' }: WaitlistFormProps) => {
       setIsSubmitted(true);
       toast({
         title: "Welcome to the waitlist!",
-        description: `You'll be the first to know when Rediscover.city launches.`,
+        description: `You'll be the first to know when rediscover.city launches.`,
       });
       
       // TODO: Handle API response
@@ -71,7 +71,7 @@ const WaitlistForm = ({ tier = 'free', className = '' }: WaitlistFormProps) => {
           You're on the list!
         </h3>
         <p className="text-muted-foreground">
-          We'll notify you as soon as Rediscover.city is available for {tier} users.
+          We'll notify you as soon as rediscover.city is available for {tier} users.
         </p>
       </Card>
     );

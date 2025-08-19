@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Download, Play } from "lucide-react";
-import heroImage from "@/assets/hero-walking.jpg";
+import heroImage from "@/assets/hero-explorer.jpg";
 import WaitlistForm from "@/components/WaitlistForm";
 
 const Hero = () => {
@@ -18,7 +18,7 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-6 text-center text-white">
         <div className="max-w-4xl mx-auto">
           <h1 className="font-serif text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            Rediscover.city
+            rediscover.city
           </h1>
           
           <p className="text-xl md:text-2xl mb-8 font-light opacity-90">
