@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { Download, Play } from "lucide-react";
+import { Play } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import heroImage from "@/assets/hero-explorer.jpg";
 import WaitlistForm from "@/components/WaitlistForm";
 
@@ -32,10 +34,7 @@ const Hero = () => {
           
           <div className="flex flex-col gap-6 items-center">
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button variant="outline" size="lg" className="text-lg px-8 py-4 bg-white/10 border-white/30 text-white hover:bg-white/20">
-                <Play className="w-5 h-5" />
-                Watch Demo
-              </Button>
+              <WatchDemoDialogButton />
             </div>
             
             <div className="max-w-md w-full">
@@ -60,3 +59,41 @@ const Hero = () => {
 };
 
 export default Hero;
+
+const WatchDemoDialogButton = () => {
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    if (open && typeof window !== "undefined" && (window as any).twttr?.widgets?.load) {
+      (window as any).twttr.widgets.load();
+    }
+  }, [open]);
+
+  return (
+    <Dialog open={open} onOpenChange={setOpen}>
+      <DialogTrigger asChild>
+        <Button variant="outline" size="lg" className="text-lg px-8 py-4 bg-white/10 border-white/30 text-white hover:bg-white/20">
+          <Play className="w-5 h-5" />
+          Watch Demo
+        </Button>
+      </DialogTrigger>
+      <DialogContent className="sm:max-w-[700px]">
+        <div className="max-h-[75vh] overflow-auto">
+          <blockquote className="twitter-tweet" data-media-max-width="560">
+            <p lang="en" dir="ltr">
+              This tweet from <a href="https://twitter.com/pitdesi?ref_src=twsrc%5Etfw">@pitdesi</a> was the trigger to start building rediscover-city
+              <br />
+              <br />
+              Here&apos;s the progress so far - dogfooding this near the Meta london office
+              <br />
+              <br />
+              - need some David Atenborough style voice, not the vanilla TTS ones
+              <br />- need to make it always-on &amp; adapts as you walk around <a href="https://t.co/Cb0RuuM4rX">https://t.co/Cb0RuuM4rX</a> <a href="https://t.co/K5eaLuyzft">pic.twitter.com/K5eaLuyzft</a>
+            </p>
+            &mdash; Arnav Gupta (@championswimmer) <a href="https://twitter.com/championswimmer/status/1957511890655146402?ref_src=twsrc%5Etfw">August 18, 2025</a>
+          </blockquote>
+        </div>
+      </DialogContent>
+    </Dialog>
+  );
+};
