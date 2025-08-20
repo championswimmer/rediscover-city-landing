@@ -1,5 +1,4 @@
-import { Button } from "@/components/ui/button";
-import { Smartphone, Mail, Shield, FileText, Apple } from "lucide-react";
+import { Shield, FileText, Apple, Twitter } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -8,7 +7,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           {/* Brand */}
           <div className="md:col-span-2">
-            <h3 className="font-serif text-2xl font-bold mb-4">Rediscover.city</h3>
+            <h3 className="font-serif text-2xl font-bold mb-4">rediscover.city</h3>
             <p className="text-secondary-foreground/80 mb-6 max-w-md leading-relaxed">
               Transform every walk into a journey through time. Discover the hidden stories 
               of your city with AI-powered narration that brings history to life.
@@ -31,12 +30,14 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-lg mb-4">Get in Touch</h4>
             <div className="space-y-3">
-              <a 
-                href="mailto:hello@rediscover.city" 
+              <a
+                href="https://twitter.com/championswimmer"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-2 text-secondary-foreground/80 hover:text-secondary-foreground transition-colors"
               >
-                <Mail className="w-4 h-4" />
-                hello@rediscover.city
+                <Twitter className="w-4 h-4" />
+                @championswimmer
               </a>
             </div>
           </div>
