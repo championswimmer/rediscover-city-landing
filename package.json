@@ -4,13 +4,13 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "npm run generate-markdown && vite",
-    "build": "npm run generate-markdown && vite build && npm run generate-seo-pages",
-    "build:dev": "npm run generate-markdown && vite build --mode development && npm run generate-seo-pages",
+    "dev": "npm run generate-markdown && npm run generate-html-entries && vite",
+    "build": "npm run generate-markdown && npm run generate-html-entries && vite build",
+    "build:dev": "npm run generate-markdown && npm run generate-html-entries && vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",
     "generate-markdown": "node scripts/generateMarkdownData.cjs",
-    "generate-seo-pages": "node scripts/generateSEOPages.cjs"
+    "generate-html-entries": "node scripts/generateHTMLEntries.cjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",

@@ -24,6 +24,17 @@ export default defineConfig(({ mode }) => ({
       ],
     }),
   ].filter(Boolean),
+  build: {
+    rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, 'index.html'),
+        'meet-friends-middle': path.resolve(__dirname, 'meet-friends-middle.html'),
+        'find-meeting-spot': path.resolve(__dirname, 'find-meeting-spot.html'),
+        'group-meeting-coordinate': path.resolve(__dirname, 'group-meeting-coordinate.html'),
+        'date-night-planning': path.resolve(__dirname, 'date-night-planning.html'),
+      }
+    }
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
