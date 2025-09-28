@@ -17,10 +17,12 @@ export default defineConfig(({ mode }) => ({
     sitemapPlugin({
       hostname: 'https://rediscover.city',
       dynamicRoutes: [
-        '/meet-friends-middle',
-        '/find-meeting-spot', 
-        '/group-meeting-coordinate',
-        '/date-night-planning'
+        '/london-walking-tour-guide',
+        '/paris-walking-tour-guide',
+        '/new-york-walking-tour-guide',
+        '/istanbul-walking-tour-guide',
+        '/berlin-walking-tour-guide',
+        '/madrid-walking-tour-guide'
       ],
     }),
   ].filter(Boolean),
@@ -28,10 +30,12 @@ export default defineConfig(({ mode }) => ({
     rollupOptions: {
       input: {
         main: path.resolve(__dirname, 'index.html'),
-        'meet-friends-middle': path.resolve(__dirname, 'meet-friends-middle.html'),
-        'find-meeting-spot': path.resolve(__dirname, 'find-meeting-spot.html'),
-        'group-meeting-coordinate': path.resolve(__dirname, 'group-meeting-coordinate.html'),
-        'date-night-planning': path.resolve(__dirname, 'date-night-planning.html'),
+        'london-walking-tour-guide': path.resolve(__dirname, 'london-walking-tour-guide.html'),
+        'paris-walking-tour-guide': path.resolve(__dirname, 'paris-walking-tour-guide.html'),
+        'new-york-walking-tour-guide': path.resolve(__dirname, 'new-york-walking-tour-guide.html'),
+        'istanbul-walking-tour-guide': path.resolve(__dirname, 'istanbul-walking-tour-guide.html'),
+        'berlin-walking-tour-guide': path.resolve(__dirname, 'berlin-walking-tour-guide.html'),
+        'madrid-walking-tour-guide': path.resolve(__dirname, 'madrid-walking-tour-guide.html'),
       }
     }
   },
