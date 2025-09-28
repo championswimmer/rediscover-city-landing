@@ -25,5 +25,7 @@ dist-ssr
 
 .env
 
-# Auto-generated markdown data
+# Auto-generated files
 src/utils/markdownData.ts
+*.html
+!index.html
