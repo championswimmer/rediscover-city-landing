@@ -24,3 +24,6 @@ dist-ssr
 *.sw?
 
 .env
+
+# Auto-generated markdown data
+src/utils/markdownData.ts
